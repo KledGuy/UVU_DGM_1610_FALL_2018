@@ -880,6 +880,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MoveSpeed: 0
+  groundCheck: {fileID: 0}
+  groundCheckRadius: 0
+  whatIsGround:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!1 &2073605457
 GameObject:
   m_ObjectHideFlags: 0
@@ -891,7 +896,7 @@ GameObject:
   - component: {fileID: 2073605460}
   - component: {fileID: 2073605459}
   - component: {fileID: 2073605458}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
