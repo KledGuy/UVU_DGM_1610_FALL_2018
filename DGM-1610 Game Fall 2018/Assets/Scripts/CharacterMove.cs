@@ -9,10 +9,10 @@ public class CharacterMove : MonoBehaviour {
 	private float JumpHeight;
 
 	//Player grounded variables
-	public Transform groundCheck;
-	public float groundCheckRadius;
-	public LayerMask whatIsGround;
-	private bool grounded;
+	public Transform GroundCheck;
+	public float GroundCheckRadius;
+	public LayerMask WhatIsGround;
+	private bool Grounded;
 
 	// Use this for initialization
 	void Start () {
@@ -20,25 +20,27 @@ public class CharacterMove : MonoBehaviour {
 	}
 	
 	void FixedUpdate () {
-		Grounded = Physics2D.OverlapCircle(groundCheck.position, groundCheck)
+		Grounded = Physics2D.OverlapCircle(GroundCheck.position, GroundCheckRadius. WhatIsGround);
 	}
 
 	// Update is called once per frame
 	void Update () {
 
 		//This code makes it jump
-		if(Input.GetKeyDown (KeyCode.Space)&& grounded){
+		if(Input.GetKeyDown (KeyCode.Space)&& Grounded){
 			Jump();
 		}
 
 		//This code makes it move from side to side
 		if(Input.GetKey (KeyCode.D)){
-			GetComponent<Rigidbody2D>().velocity = new Vector2(MoveSpeed, GetComponent<Rigidbody2D>().
+			GetComponent<Rigidbody2D>().velocity = new Vector2(MoveSpeed, GetComponent<Rigidbody2D>().velocity.y);
 		}
 		if(Input.GetKey (KeyCode.A)){
-			GetComponent<Rigidbody2D>().velocity = new Vector2(-MoveSpeed, Grounded)
+			GetComponent<Rigidbody2D>().velocity = new Vector2(-MoveSpeed, GetComponent<Rigidbody2D>().velocity.y);
+		}
 	}
-
+	
+	//Jumping code
 	public void Jump(){
 		GetComponent<Rigidbody2D>().velocity = new Vector2(GetComponent<Rigidbody2D>().velocity.x, JumpHeight);
 	}
