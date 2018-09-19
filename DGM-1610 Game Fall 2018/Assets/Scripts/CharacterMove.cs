@@ -6,7 +6,7 @@ public class CharacterMove : MonoBehaviour {
 
 	// Player Movement Variables
 	public int MoveSpeed;
-	private float JumpHeight;
+	public float JumpHeight;
 
 	//Player grounded variables
 	public Transform GroundCheck;
@@ -20,7 +20,7 @@ public class CharacterMove : MonoBehaviour {
 	}
 	
 	void FixedUpdate () {
-		Grounded = Physics2D.OverlapCircle(GroundCheck.position, GroundCheckRadius. WhatIsGround);
+		Grounded = Physics2D.OverlapCircle(GroundCheck.position, GroundCheckRadius, WhatIsGround);
 	}
 
 	// Update is called once per frame
