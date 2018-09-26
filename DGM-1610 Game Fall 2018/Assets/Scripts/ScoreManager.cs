@@ -1,9 +1,10 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class ScoreManager : MonoBehaviour {
-	public static int score;
+	public static int Score;
 
 	Text ScoreText;
 
@@ -18,7 +19,7 @@ public class ScoreManager : MonoBehaviour {
 	void Update () {
 		if (Score < 0)
 			Score = 0;
-		ScoreText.text = " " + Score
+		ScoreText.text = " " + Score;
 		
 	}
 
