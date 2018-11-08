@@ -221,6 +221,34 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PointsToAdd: 0
+--- !u!1 &104569164
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 104569165}
+  m_Layer: 0
+  m_Name: Player2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &104569165
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 104569164}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -9.732444, y: -2.2902758, z: 89.99736}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 12
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &175472070
 GameObject:
   m_ObjectHideFlags: 0
@@ -344,6 +372,53 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 364157ca3b1c4fc4f99e373b18470af7, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &336975704
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 336975706}
+  - component: {fileID: 336975705}
+  m_Layer: 0
+  m_Name: GameManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &336975705
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 336975704}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 01c95d48c0fdfd3478109f6da8438844, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CurrentCheckPoint: {fileID: 1131533585}
+  Player: {fileID: 1918315430}
+  Player2: {fileID: 0}
+  DeathParticle: {fileID: 0}
+  RespawnParticle: {fileID: 0}
+  RespawnDelay: 0
+  PointPenaltyOnDeath: 0
+--- !u!4 &336975706
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 336975704}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -9.732444, y: -2.2902758, z: 89.99736}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 11
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &458002548
 GameObject:
   m_ObjectHideFlags: 0
@@ -840,7 +915,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f8c7bda934e3424419d9bdc4206cf9f6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  LevelManager: {fileID: 1918315433}
+  LevelManager: {fileID: 0}
 --- !u!114 &1225070605
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1084,6 +1159,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Eggscellent: 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
   Cheese: []
+  Coins: []
+  Puzzles: 00000000000000000000000000000000
+  Poodles: []
+  Handedness: 0000000000000000000000000000000000000000
 --- !u!1 &1377249768
 GameObject:
   m_ObjectHideFlags: 0
@@ -1290,7 +1369,6 @@ GameObject:
   - component: {fileID: 1918315431}
   - component: {fileID: 1918315430}
   - component: {fileID: 1918315432}
-  - component: {fileID: 1918315433}
   - component: {fileID: 1918315434}
   m_Layer: 0
   m_Name: Player
@@ -1423,23 +1501,6 @@ MonoBehaviour:
   WhatIsGround:
     serializedVersion: 2
     m_Bits: 256
---- !u!114 &1918315433
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1918315427}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 01c95d48c0fdfd3478109f6da8438844, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  CurrentCheckPoint: {fileID: 1131533585}
-  Player: {fileID: 1918315430}
-  DeathParticle: {fileID: 0}
-  RespawnParticle: {fileID: 0}
-  RespawnDelay: 0
-  PointPenaltyOnDeath: 0
 --- !u!114 &1918315434
 MonoBehaviour:
   m_ObjectHideFlags: 0
