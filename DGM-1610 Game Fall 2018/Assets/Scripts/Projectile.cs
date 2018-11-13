@@ -5,19 +5,28 @@ using UnityEngine;
 public class Projectile : MonoBehaviour {
 
 	public float Speed;
-	public Rigidbody2D Player;
+	public GameObject Player;
 
 	public GameObject EnemyDeath;
 	public GameObject ProjectileParticle;
 	public int PointsForKill;
 
+	public int TimeOut;
+
 	// Use this for initialization
 	void Start () {
+
+		Player = GameObject.Find("Player");
+
+		EnemyDeath = Resources.Load("Prefabs/Particle") as GameObject;
+		ProjectileParticle = Resources.Load("Prefabs/Particle") as GameObject;
 
 		if(Player.transform.localScale.x < 0)
 			Speed = -Speed;
 
 			// Speed = Speed * Mathf.Sign(Player.transform.localScale.x);
+
+		Destroy(gameObject, TimeOut);
 
 		
 	}
