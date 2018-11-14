@@ -293,6 +293,15 @@ Prefab:
       propertyPath: m_RootOrder
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 1650154036297134, guid: 364157ca3b1c4fc4f99e373b18470af7, type: 2}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 212779395483652772, guid: 364157ca3b1c4fc4f99e373b18470af7,
+        type: 2}
+      propertyPath: m_SortingOrder
+      value: -1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 364157ca3b1c4fc4f99e373b18470af7, type: 2}
   m_IsPrefabParent: 0
@@ -572,7 +581,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 687277088}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: EdgeCheck
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -840,7 +849,7 @@ GameObject:
   - component: {fileID: 1225070606}
   - component: {fileID: 1225070605}
   - component: {fileID: 1225070604}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Enemy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1253,7 +1262,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 1718652336}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: WallCheck
   m_TagString: Untagged
   m_Icon: {fileID: 0}
