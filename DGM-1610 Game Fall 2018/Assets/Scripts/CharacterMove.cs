@@ -50,10 +50,12 @@ public class CharacterMove : MonoBehaviour {
 		if(Input.GetKey (KeyCode.D)){
 			GetComponent<Rigidbody2D>().velocity = new Vector2(MoveSpeed, GetComponent<Rigidbody2D>().velocity.y);
 			moveVelocity = MoveSpeed;
+			Animator.SetFloat("Speed", moveSpeed);
 		}
 		if(Input.GetKey (KeyCode.A)){
 			GetComponent<Rigidbody2D>().velocity = new Vector2(-MoveSpeed, GetComponent<Rigidbody2D>().velocity.y);
 			moveVelocity = -MoveSpeed;
+			Animator.SetFloat("Speed", moveSpeed);
 		
 		//Flipping
 		if(GetComponent<Rigidbody2D>().velocity.x > 0)

@@ -19,7 +19,7 @@ public class HealthManager : MonoBehaviour {
 	void Update () {
 		if (Health < 0)
 			Health = 0;
-		Health.text = " " + Health;
+		HealthText.text = " " + Health;
 		
 	}
 		

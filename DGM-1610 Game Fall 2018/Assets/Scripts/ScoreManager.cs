@@ -9,6 +9,8 @@ public class ScoreManager : MonoBehaviour {
 
 	public Text WinText;
 
+	public int WinScore = 5;
+
 	Text ScoreText;
 
 	// Use this for initialization
@@ -26,7 +28,7 @@ public class ScoreManager : MonoBehaviour {
 			Score = 0;
 		ScoreText.text = " " + Score;
 		
-	}
+	
 
 	if(Score >= WinScore){
 		print("Win Score Reached = " + Score);
@@ -36,6 +38,8 @@ public class ScoreManager : MonoBehaviour {
 
 	if(Input.GetKeyDown(KeyCode.Escape)){
 		SceneManager.LoadScene(0);
+	}
+
 	}
 
 	public static void AddPoints (int PointsToAdd) {
